@@ -6,12 +6,12 @@ services:
     restart: ${RESTART}
     user: root
     environment:
-      ACCEPT_EULA: ${EULA}
-      MSSQL_SA_PASSWORD: ${PASSWORD}
-      MSSQL_PID: ${PID}
-      TZ: ${TIMEZONE}
+      ACCEPT_EULA: ${MSSQL_EULA}
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD}
+      MSSQL_PID: ${MSSQL_PID}
+      TZ: ${MSSQL_TIMEZONE}
     ports:
-      - ${PORT}:1433
+      - ${MSSQL_PORT}:1433
     volumes:
       - mssql_data:/var/opt/mssql/data
       - mssql_log:/var/opt/mssql/log

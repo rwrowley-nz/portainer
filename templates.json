@@ -18,12 +18,12 @@
             },
             "env": [
                 {
-                    "name": "PASSWORD",
+                    "name": "MSSQL_SA_PASSWORD",
                     "label": "Database sa password",
                     "description": "Password used by the MS SQL sa user."
                 },
                 {
-                    "name": "PID",
+                    "name": "MSSQL_PID",
                     "label": "Edition",
                     "description": "Which edition to install. Some are free for production, some free for development and all others are paid for.",
                     "select": [
@@ -71,7 +71,7 @@
                     ]
                 },
                 {
-                    "name": "EULA",
+                    "name": "MSSQL_EULA",
                     "label": "Accept EULA?",
                     "description": "Do you accept the End User License Agreement?",
                     "select": [
@@ -111,13 +111,13 @@
                     ]
                 },
                 {
-                    "name": "TIMEZONE",
+                    "name": "MSSQL_TIMEZONE",
                     "label": "Timezone",
                     "description": "Timezone using TZ DATA names",
                     "default": "Etc/UTC"
                 },
                 {
-                    "name": "PORT",
+                    "name": "MSSQL_PORT",
                     "label": "Host Port",
                     "default": "1433"
                 }
