@@ -16,9 +16,6 @@
                 "url": "https://github.com/rwrowley-nz/portainer",
                 "stackfile": "stacks/sql2025/docker-compose.yml"
             },
-            "ports": [
-                "4133/tcp"
-            ],
             "env": [
                 {
                     "name": "PASSWORD",
