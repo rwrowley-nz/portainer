@@ -111,10 +111,15 @@
                     ]
                 },
                 {
-                    "name": "TZ",
+                    "name": "TIMEZONE",
                     "label": "Timezone",
                     "description": "Timezone using TZ DATA names",
                     "default": "Etc/UTC"
+                },
+                {
+                    "name": "PORT",
+                    "label": "Host Port",
+                    "default": "1433"
                 }
             ]
         }
