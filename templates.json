@@ -1,0 +1,122 @@
+{
+    "version": "3",
+    "templates": [
+        {
+            "id": 1,
+            "type": 3,
+            "title": "MS SQL 2025",
+            "description": "Microsoft SQL Server 2025",
+            "note": "Deploys a Microsoft SQL Server 2025 on Linux container.",
+            "categories": [
+                "Database"
+            ],
+            "platform": "linux",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/4/41/Microsoft_SQL_Server_2025_icon.svg",
+            "repository": {
+                "url": "https://github.com/rwrowley-nz/portainer",
+                "stackfile": "stacks/sql2025/docker-stack.yml"
+            },
+            "env": [
+                {
+                    "name": "MSSQL_SA_PASSWORD",
+                    "label": "Database sa password",
+                    "description": "Password used by the MS SQL sa user."
+                },
+                {
+                    "name": "MSSQL_PID",
+                    "label": "Edition",
+                    "description": "Which edition to install. Some are free for production, some free for development and all others are paid for.",
+                    "select": [
+                        {
+                            "text": "Evaluation (180 days)",
+                            "value": 1
+                        },
+                        {
+                            "text": "Enterprise Developer (free)",
+                            "value": 2
+                        },
+                        {
+                            "text": "Standard Developer (free)",
+                            "value": 3,
+                            "default": true
+                        },
+                        {
+                            "text": "Express (free)",
+                            "value": 4
+                        },
+                        {
+                            "text": "Standard (PAID)",
+                            "value": 5
+                        },
+                        {
+                            "text": "Enterprise (PAID)",
+                            "value": 6
+                        },
+                        {
+                            "text": "Enterprise Core (PAID)",
+                            "value": 7
+                        },
+                        {
+                            "text": "Retail. Have product key to enter",
+                            "value": 8
+                        },
+                        {
+                            "text": "Standard (PAID via Azure)",
+                            "value": 9
+                        },
+                        {
+                            "text": "Enterprise Core (PAID via Azure)",
+                            "value": 10
+                        }
+                    ]
+                },
+                {
+                    "name": "ACCEPT_EULA",
+                    "label": "Accept EULA?",
+                    "description": "Do you accept the End User License Agreement?",
+                    "select": [
+                        {
+                            "text": "Yes, I agree",
+                            "value": "Y",
+                            "default": true
+                        },
+                        {
+                            "text": "No, I disagree",
+                            "value": "N"
+                        }
+                    ]
+                },
+                {
+                    "name": "RESTART",
+                    "label": "Restart",
+                    "description": "When should this be restarted?",
+                    "select": [
+                        {
+                            "text": "Do not restart",
+                            "value": "no",
+                            "default": true
+                        },
+                        {
+                            "text": "On failure",
+                            "value": "on-failure"
+                        },
+                        {
+                            "text": "Always",
+                            "value": "always"
+                        },
+                        {
+                            "text": "Unless stopped",
+                            "value": "unless-stopped"
+                        }
+                    ]
+                },
+                {
+                    "name": "PORT",
+                    "label": "Host Port",
+                    "description": "Port on host to connect to",
+                    "default": 1433
+                }
+            ]
+        }
+    ]
+}

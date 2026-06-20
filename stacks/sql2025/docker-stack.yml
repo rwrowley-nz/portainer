@@ -1,0 +1,26 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2025-latest
+
+    container_name: sql_server_2025
+    user: root
+    ports:
+      - ${PORT}:1433
+    volumes:
+      - mssql_data:/var/opt/mssql/data
+      - mssql_log:/var/opt/mssql/log
+      - mssql_secrets:/var/opt/mssql/secrets
+      
+    restart: ${RESTART}
+
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P \"$${MSSQL_SA_PASSWORD}\" -Q \"SELECT 1\" -No > /dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+volumes:
+  mssql_data:
+  mssql_log:
+  mssql_secrets:
