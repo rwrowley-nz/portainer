@@ -14,16 +14,19 @@
             "logo": "https://upload.wikimedia.org/wikipedia/commons/4/41/Microsoft_SQL_Server_2025_icon.svg",
             "repository": {
                 "url": "https://github.com/rwrowley-nz/portainer",
-                "stackfile": "stacks/sql2025/docker-stack.yml"
+                "stackfile": "stacks/sql2025/docker-compose.yml"
             },
+            "ports": [
+                "4133/tcp"
+            ],
             "env": [
                 {
-                    "name": "MSSQL_SA_PASSWORD",
+                    "name": "PASSWORD",
                     "label": "Database sa password",
                     "description": "Password used by the MS SQL sa user."
                 },
                 {
-                    "name": "MSSQL_PID",
+                    "name": "PID",
                     "label": "Edition",
                     "description": "Which edition to install. Some are free for production, some free for development and all others are paid for.",
                     "select": [
@@ -71,7 +74,7 @@
                     ]
                 },
                 {
-                    "name": "ACCEPT_EULA",
+                    "name": "EULA",
                     "label": "Accept EULA?",
                     "description": "Do you accept the End User License Agreement?",
                     "select": [
@@ -111,10 +114,10 @@
                     ]
                 },
                 {
-                    "name": "PORT",
-                    "label": "Host Port",
-                    "description": "Port on host to connect to",
-                    "default": 1433
+                    "name": "TZ",
+                    "label": "Timezone",
+                    "description": "Timezone using TZ DATA names",
+                    "default": "Etc/UTC"
                 }
             ]
         }

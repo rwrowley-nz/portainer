@@ -4,8 +4,13 @@ services:
 
     container_name: sql_server_2025
     user: root
+    environment:
+      - ACCEPT_EULA={{ EULA }}
+      - MSSQL_SA_PASSWORD={{ PASSWORD }}
+      - MSSQL_PID={{ PID }}
+      - TZ={{ TIMEZONE }}
     ports:
-      - ${PORT}:1433
+      - {{ PORT }}:1433
     volumes:
       - mssql_data:/var/opt/mssql/data
       - mssql_log:/var/opt/mssql/log
