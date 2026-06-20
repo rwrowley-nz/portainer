@@ -29,44 +29,32 @@
                     "select": [
                         {
                             "text": "Evaluation (180 days)",
-                            "value": "1"
+                            "value": "Evaluation"
                         },
                         {
                             "text": "Enterprise Developer (free)",
-                            "value": "2"
+                            "value": "EnterpriseDeveloper"
                         },
                         {
                             "text": "Standard Developer (free)",
-                            "value": "3",
+                            "value": "StandardDeveloper",
                             "default": true
                         },
                         {
                             "text": "Express (free)",
-                            "value": "4"
+                            "value": "Express"
                         },
                         {
                             "text": "Standard (PAID)",
-                            "value": "5"
+                            "value": "Standard"
                         },
                         {
                             "text": "Enterprise (PAID)",
-                            "value": "6"
+                            "value": "Enterprise"
                         },
                         {
                             "text": "Enterprise Core (PAID)",
-                            "value": "7"
-                        },
-                        {
-                            "text": "Retail. Have product key to enter",
-                            "value": "8"
-                        },
-                        {
-                            "text": "Standard (PAID via Azure)",
-                            "value": "9"
-                        },
-                        {
-                            "text": "Enterprise Core (PAID via Azure)",
-                            "value": "10"
+                            "value": "EnterpriseCore"
                         }
                     ]
                 },
