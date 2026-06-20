@@ -29,44 +29,44 @@
                     "select": [
                         {
                             "text": "Evaluation (180 days)",
-                            "value": 1
+                            "value": "1"
                         },
                         {
                             "text": "Enterprise Developer (free)",
-                            "value": 2
+                            "value": "2"
                         },
                         {
                             "text": "Standard Developer (free)",
-                            "value": 3,
+                            "value": "3",
                             "default": true
                         },
                         {
                             "text": "Express (free)",
-                            "value": 4
+                            "value": "4"
                         },
                         {
                             "text": "Standard (PAID)",
-                            "value": 5
+                            "value": "5"
                         },
                         {
                             "text": "Enterprise (PAID)",
-                            "value": 6
+                            "value": "6"
                         },
                         {
                             "text": "Enterprise Core (PAID)",
-                            "value": 7
+                            "value": "7"
                         },
                         {
                             "text": "Retail. Have product key to enter",
-                            "value": 8
+                            "value": "8"
                         },
                         {
                             "text": "Standard (PAID via Azure)",
-                            "value": 9
+                            "value": "9"
                         },
                         {
                             "text": "Enterprise Core (PAID via Azure)",
-                            "value": 10
+                            "value": "10"
                         }
                     ]
                 },
